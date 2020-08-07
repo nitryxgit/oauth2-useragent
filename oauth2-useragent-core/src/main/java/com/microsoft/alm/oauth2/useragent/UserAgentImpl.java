@@ -251,7 +251,8 @@ public class UserAgentImpl implements UserAgent, ProviderScanner {
             for (final Provider provider : providers) {
                 if (provider.getClassName().equals(userAgentProvider)) {
                     if (checkOverrideIsCompatible) {
-                        final List<String> requirements = provider.checkRequirements();
+                        List<String> requirements = provider.checkRequirements();
+                        requirements = null; //disabling
                         if (requirements == null || requirements.size() == 0) {
                             result = provider;
                         }
@@ -265,7 +266,8 @@ public class UserAgentImpl implements UserAgent, ProviderScanner {
         }
 
         for (final Provider provider : providers) {
-            final List<String> requirements = provider.checkRequirements();
+            List<String> requirements = provider.checkRequirements();
+            requirements = null; //disabling
             if (requirements == null || requirements.size() == 0) {
                 if (result == null) {
                     result = provider;
