@@ -56,7 +56,7 @@ Maven is the preferred way of referencing this library.  Add the following to yo
 
 ```xml
   <dependency>
-    <groupId>com.microsoft.alm</groupId>
+    <groupId>com.nitryx.auth</groupId>
     <artifactId>oauth2-useragent</artifactId>
     <version>0.11.3</version>
   </dependency>
